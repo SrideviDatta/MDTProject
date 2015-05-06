@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="edu.cmu.bhavnap.helloAndroid.MainActivity" >
+    
+    <LinearLayout
+        android:id="@+id/llSetAlarm"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal" >
+        
+        <LinearLayout
+        android:id="@+id/llImg"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/clock4" />
+        
+            </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/llText"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="242dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="Set an alarm!"
+                android:textSize="40px"
+                android:textStyle="bold" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/eTStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/tVStartDate"
+        android:layout_alignBottom="@+id/tVStartDate"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:hint="mm/dd/yyyy"
+        android:textSize="24px"
+        android:background="@drawable/edittextstyle">
+    </EditText>
+
+    <EditText
+        android:id="@+id/eTEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/tVEndDate"
+        android:layout_alignBottom="@+id/tVEndDate"
+        android:layout_alignLeft="@+id/eTStartDate"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:hint="mm/dd/yyyy"
+        android:textSize="24px" >
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/eTFrequencyWeek"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/tVFrequency"
+        android:layout_alignBottom="@+id/tVFrequency"
+        android:layout_alignLeft="@+id/eTEndDate"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:hint="day"
+        android:textSize="24px" />
+
+    <EditText
+        android:id="@+id/eTFrequencyDay"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/eTFrequencyWeek"
+        android:layout_alignBottom="@+id/eTFrequencyWeek"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/eTFrequencyWeek"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:hint="hour"
+        android:textSize="24px" />
+
+    <EditText
+        android:id="@+id/eTFrequencyHour"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/eTFrequencyDay"
+        android:layout_alignBottom="@+id/eTFrequencyDay"
+        android:layout_alignRight="@+id/eTEndDate"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:hint="min"
+        android:textSize="24px" />
+
+    <EditText
+        android:id="@+id/eTMedicine"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/tVMedicine"
+        android:layout_alignBottom="@+id/tVMedicine"
+        android:layout_alignLeft="@+id/eTFrequencyWeek"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:hint="Medicine Name"
+        android:textSize="24px" />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tVDescription"
+        android:layout_alignParentBottom="true"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/eTDescription"
+        android:text="Cancel" />
+
+    <EditText
+        android:id="@+id/eTDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/eTMedicine"
+        android:layout_alignTop="@+id/tVDescription"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:hint="Enter Details"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tVFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tVStartDate"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Frequency"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tVMedicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tVStartDate"
+        android:layout_below="@+id/eTFrequencyWeek"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:text="Medicine"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tVDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tVMedicine"
+        android:layout_below="@+id/eTMedicine"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:text="Description"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tVEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tVFrequency"
+        android:layout_below="@+id/eTStartDate"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="End Date"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tVStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/llSetAlarm"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:text="Start Date"
+        android:textSize="24px" />
+    
+    <Button
+        android:id="@+id/btnView"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnSave"
+        android:layout_alignBottom="@+id/btnSave"
+        android:layout_alignLeft="@+id/eTDescription"
+        android:text="View Alarms" />
+
+</RelativeLayout>

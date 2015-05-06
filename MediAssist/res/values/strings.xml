@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_world">Welcome to MediCall!</string>
+    <string name="app_name">MediCall</string>
+     <string-array name="sports_array">
+        <item>Devika Malhotra</item>
+        <item>Anagha Gulwady</item>
+        <item>Prerna Bellara</item>
+        <item>Bhavna Prasad</item>
+        <item>Shruti Ramakrishnan</item>
+        <item>Sridevi</item>
+    </string-array>
+</resources>
